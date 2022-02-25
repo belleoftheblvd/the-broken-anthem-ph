@@ -1,0 +1,117 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: crimson;
+}
+
+h3{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: crimson;
+    text-align: center;
+}
+
+.category{
+    font-family: impact;
+    font-size: 40px;
+    color: white;
+}
+
+footer{
+   font-family: impact;
+    font-size: 30px;
+    color: white; 
+}
+
+body{
+            text-align: center;
+            margin: 0px;
+            font-family: impact;
+        }
+        
+        input{
+            display: none;
+        }
+
+        .tag{
+            font-size: 20px;
+            margin: 1.5em 0px;
+            padding: 5px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            cursor: pointer;
+            background: #efefef;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ccc;
+        }
+
+        img{
+            max-width: 400px;
+            width: 400px;
+            height: 300px;
+            transition: all .6s ease-in-out;
+
+        }
+
+        .popup-image {
+            position: fixed;
+            top: 0; left: 0;
+            background: rgba(0, 0, 0, .9);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+
+        }
+
+        .popup-image span {
+            position: absolute;
+            top: 0; right: 10px;
+            font-size: 60px;
+            font-weight: bolder;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .popup-image img {
+            position: absolute;
+            top: 50%; left: 50;
+            transform: translate(-50%, -50%);
+            width: 750px;
+            object-fit: cover;
+        }
+
+    @media (max-width: 768px){
+        .popup-image img {
+            width: 95%;
+        }
+    }
+
+        /*filter CSS */
+
+         #fish:checked ~ .images > img:not([class*='fish']),
+         #birds:checked ~ .images > img:not([class*='birds']),
+         #tahani:checked ~ .images > img:not([class*='tahani']),
+         #mayo:checked ~ .images > img:not([class*='mayo']),
+         #lion:checked ~ .images > img:not([class*='lion']){
+           width: 0px;
+           height: 0px;
+        }
+
+        #all:checked ~ .all,
+        #fish:checked ~ .tag1, 
+        #birds:checked ~ .tag2,
+        #lion:checked ~ .tag3
+        #tahani:checked ~ .tag4
+        #mayo:checked ~ .tag5{
+            background-color: #333333;      
+            color: white;
+        } 
